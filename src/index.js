@@ -7,6 +7,7 @@ import Album from "./Dashboard/Album";
 import Pricing from "./Dashboard/Pricing";
 import Dashboard from "./Dashboard/Dashboard";
 import DefautRoute from "./Dashboard/DefautRoute";
+import About from "./view/About";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="album" element={<Album />} />
           <Route path="pricing" element={<Pricing />} />
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>
