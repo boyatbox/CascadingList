@@ -62,7 +62,24 @@ const masterData = [
   },
 ];
 
-const portfolioData = [1,2,3];
+const portfolioData = [
+  {
+    id: "1",
+    label: "P1",
+  },
+  {
+    id: "1",
+    label: "P1",
+  },
+  {
+    id: "2",
+    label: "P2",
+  },
+  {
+    id: "3",
+    label: "P3",
+  },
+];
 
 export function FilterPanel(props) {
   const portfolios = useMemo(() => getDistinctItemsById(portfolioData), []);
@@ -93,8 +110,6 @@ export function FilterPanel(props) {
     }
   };
   const handleValuestreamChange = (event) => {
-      console.log('handleValuestreamChange');
-    //if item not present in valuestreams array remove it
     setSelectedValuestream(event.target.value);
   };
 
