@@ -35,8 +35,7 @@ const theme = createTheme();
 
 export default function Album() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <main>
         {/* Hero unit */}
         <Box
@@ -80,7 +79,7 @@ export default function Album() {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {cards.map((card,i) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{
@@ -95,7 +94,7 @@ export default function Album() {
                       // 16:9
                       pt: "56.25%",
                     }}
-                    image="https://source.unsplash.com/random"
+                    image={(i+1)+".jpg"}
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
@@ -132,7 +131,6 @@ export default function Album() {
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
-    </ThemeProvider>
+</>
   );
 }

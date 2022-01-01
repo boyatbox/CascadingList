@@ -68,8 +68,17 @@ const Drawer = styled(MuiDrawer, {
     }),
   },
 }));
-
-const mdTheme = createTheme();
+//#0052cc
+const mdTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#880e4f",
+    },
+    secondary: {
+      main: "#edf2ff",
+    },
+  },
+});
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);

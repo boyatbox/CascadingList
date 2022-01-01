@@ -23,6 +23,7 @@ export function NavLinks() {
       {links.map((v) => {
         return (
           <NavLink
+            key={v.path}
             to={v.path}
             style={({ isActive }) =>
               isActive
